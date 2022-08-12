@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Custom Element</title>
+   <!--  <link rel="stylesheet" href="styles.css"></head> -->
+
+<body>
+  <login-form
+  emaillabel="Email a"
+  emailPlaceholder="Insert Email"
+  passLabel="Password label"
+  passPlaceholder="******"
+  buttonlabel="Enviar"
+  forgotPassword="Forgot your password??"
+    >
+    
+    </login-form>
+
+    <script>
+    
+      const el = document.querySelector('login-form');
+      el.addEventListener('formValues', e => {
+        console.log('Form data', e);
+      });
+      el.addEventListener('forgotPasswordEmitter', e => {
+        console.log('Forgot password event', e);
+      });
+     
+    </script>
+    <script src="login-form.js"></script>
+</html>
